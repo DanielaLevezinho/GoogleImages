@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="PCM Final Project - Visual Search">
+    <meta name="keywords" content="HTML5, CSS, JavaScript">
+    <meta name="author" content="Rui Jesus">
+    <meta charset="UTF-8">
+    <title>Visual Search</title>
+    <!-- CSS only -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/autoComplete.css">
+    <link rel="stylesheet" href="css/VSearchStyle.css">
+
+
+</head>
+<body id="bodys">
+    <header id="tools">
+        <div  class="camara">
+            <i class="fas fa-camera-retro"></i>
+            DaTa
+        </div>
+
+        <form autocomplete="off">
+            <div class="boxshadow1">
+                <div class="boxshadow2">
+                    <div class="input-group autocomplete">
+                        <div href="#backToTop" class="butaoProcura">
+                            <input id="myInput" class="form-control" type="text" name="category" placeholder="Category"
+                                aria-describedby="enviar"></input>
+                            <span class="input-group-text icon" id="basic-addon1"><i class="fas fa-search"></i></span>
+                        </div>
+                        <div id="inputCor" class="butaoCor">
+                            <img id="imgCor" class="buttonCor" src="./Images/icons/colour.svg" alt="Butao cor">
+                        </div>
+                        <!-- <button id="enviar" type="button" class="btn btn-md btn-primary input-group-append"
+                            disabled>Send</button> -->
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div>
+
+        </div>
+
+        <button id="mute" alt="mute" title="mute" onclick="toggleMute()">
+            <i id="mutes" class="fas fa-volume-mute"></i>
+            <i id="som" class="fas fa-volume-up"></i>
+        </button>
+
+        <audio id="audio" autoplay controls loop>
+            <source src="audio/musicaElevador.mp3" type="audio/mpeg">
+        </audio>
+
+    </header>
+
+    <section id="query">
+
+    </section>
+
+    <section id="visualizacao" class ="scrollbar">
+        <canvas id="canvas">
+            Your browser doesn't recognize the canvas element
+        </canvas>
+        <footer id="foots">
+            <div class="camara cameraFooter">
+                <i class="fas fa-camera-retro">
+                </i>
+                DaTa
+            </div>
+            <div>
+                Designed by: Daniela Levezinho
+                <span class="number">
+                    47472
+                </span> 
+                Tatiana Cristão 
+                <span class="number">
+                    47508
+                </span>
+            </div>
+
+            <button id="backToTop" onclick="backToTop()">
+                <i class="fas fa-angle-double-up"></i>
+            </button>
+
+        </footer>
+    </section>
+
+        
+       
+
+
+    <script src="js/Image_Processing.js"></script>
+    <script src="js/XML_Database.js"></script>
+    <script src="js/ISearchEngine.js"></script>
+    <script src="js/ISearchEngine_Manager.js"></script>
+    <script src="js/autoComplete.js"></script>
+    <script src="https://kit.fontawesome.com/8d9214c896.js" crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script> window.onload = main(); </script>
+</body>
+
+</html>

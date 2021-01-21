@@ -1,0 +1,174 @@
+
+* {
+  box-sizing: border-box;
+}
+
+/*the container must be positioned relative:*/
+.autocomplete, .select{
+  position: relative;
+  width: 400px;
+  display: flex;
+}
+
+#inputCor{
+  padding: 5px;
+}
+
+.classCor{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 32px;
+	height: 32px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
+.option{
+  font-size: 16px;
+  z-index: 0;
+  position: relative;
+  height: 100px;
+  width: 45%;
+  margin: 2.5%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.optionSelect{
+  text-transform: capitalize;
+  height: 40px;
+  width: 100%;
+}
+
+.optionOverlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(33, 33, 33, 0.3) !important;
+    z-index: -1;
+    mix-blend-mode: multiply;
+  }
+
+.icon{
+    height: 100%;
+    background: none;
+    border-left: none;
+    position: absolute;
+    border: none;   
+    right: 0;
+    pointer-events: none;
+    z-index: 4;
+    top: 0;
+}
+
+.butaoProcura{
+    flex-grow: 1;
+    position: relative;
+}
+
+.butaoCor{
+  font-size: 16px;
+  width: 38px;
+  height: 38px;
+  position: relative;
+  background-color: #f1f1f1;
+  /* border: 1px solid #ced4da; */
+  border-left: none;
+  
+}
+
+.buttonCor{
+  width: 100%;
+  height: 100%;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+
+}
+
+input:focus{
+    /* outline:black 1px !important; */
+    border-color: #ced4da !important;
+    box-shadow: none !important;
+    /* outline: -webkit-focus-ring-color auto 1px !important;  */
+}
+
+
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  height: 100%;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+
+.select-items{
+  width: 140px; 
+  position: fixed;
+  background: white;
+  border-radius: 10px;
+  height: 40vh;
+  overflow: auto;
+}
+
+.optionSelect{
+  width: 95%;
+}
+
+.autocomplete-items{
+  position: fixed;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  background: white;
+  width: 290px;
+  overflow: auto;
+  height: 40vh;
+  border-radius: 10px;
+}
+
+.autocomplete-items div, .select-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover, .select-items div:hover  {
+  background-color: #e9e9e9; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active, .select-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
